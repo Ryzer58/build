@@ -1,10 +1,10 @@
 From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
-From: Ryzer <ryestar101@gmail.com>
+From: Ryzer58 <ryestar101@gmail.com>
 Date: Mon, 12 Aug 2024 00:25:36 +0100
 Subject: Restore Allwinner A10 SPI 0 - 2 overlay creation so that pins can be corrected muxed into
 SPI mode
 
-Signed-off-by: Ryzer <ryestar101@gmail.com>
+Signed-off-by: Ryzer58 <ryestar101@gmail.com>
 ---
  arch/arm/boot/dts/allwinner/overlay/Makefile | 3 +++
  1 file changed, 3 insertions(+)
