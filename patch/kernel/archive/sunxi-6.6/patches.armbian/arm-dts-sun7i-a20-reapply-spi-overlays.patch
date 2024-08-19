@@ -1,0 +1,31 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Ryzer <ryestar101@gmail.com>
+Date: Mon, 12 Aug 2024 00:32:49 +0100
+Subject: Restore Allwinner A20 SPI 0 - 2 overlay creation so that pins can be corrected muxed into
+SPI mode
+Signed-off-by: Ryzer <ryestar101@gmail.com>
+---
+ arch/arm/boot/dts/allwinner/overlay/Makefile | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/arch/arm/boot/dts/allwinner/overlay/Makefile b/arch/arm/boot/dts/allwinner/overlay/Makefile
+index 0a1c94e1eb12..2e3d756bc429 100644
+--- a/arch/arm/boot/dts/allwinner/overlay/Makefile
++++ b/arch/arm/boot/dts/allwinner/overlay/Makefile
+@@ -46,10 +46,13 @@ dtb-$(CONFIG_MACH_SUN7I) += \
+ 	sun7i-a20-i2c4.dtbo \
+ 	sun7i-a20-mmc2.dtbo \
+ 	sun7i-a20-nand.dtbo \
+ 	sun7i-a20-pps-gpio.dtbo \
+ 	sun7i-a20-pwm.dtbo \
++	sun7i-a20-spi0.dtbo \
++	sun7i-a20-spi1.dbto \
++	sun7i-a20-spi2.dbto \
+ 	sun7i-a20-spdif-out.dtbo \
+ 	sun7i-a20-spi-add-cs1.dtbo \
+ 	sun7i-a20-spi-jedec-nor.dtbo \
+ 	sun7i-a20-spi-spidev.dtbo \
+ 	sun7i-a20-uart2.dtbo \
+-- 
+Created with Armbian build tools https://github.com/armbian/build
+
