@@ -18,8 +18,8 @@ index 0a1c94e1eb12..2e3d756bc429 100644
  	sun7i-a20-pps-gpio.dtbo \
  	sun7i-a20-pwm.dtbo \
 +	sun7i-a20-spi0.dtbo \
-+	sun7i-a20-spi1.dbto \
-+	sun7i-a20-spi2.dbto \
++	sun7i-a20-spi1.dtbo \
++	sun7i-a20-spi2.dtbo \
  	sun7i-a20-spdif-out.dtbo \
  	sun7i-a20-spi-add-cs1.dtbo \
  	sun7i-a20-spi-jedec-nor.dtbo \
