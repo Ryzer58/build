@@ -1,8 +1,7 @@
 From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Ryzer58 <ryestar101@gmail.com>
 Date: Sat, 10 Aug 2024 00:09:43 +0100
-Subject: Amend port aliases for the Allwinner A10 so that now the port number issued correctly aligns with the physical port 
-number for interfaces I2C, SPI and UART
+Subject: Amend port aliases for the Allwinner A10 so that now the port number issued correctly aligns with the physical port for interfaces I2C, SPI and UART
 
 Signed-off-by: Ryzer58 <ryestar101@gmail.com>
 ---

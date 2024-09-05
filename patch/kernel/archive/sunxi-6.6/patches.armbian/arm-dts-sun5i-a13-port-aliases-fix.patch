@@ -1,8 +1,7 @@
 From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Ryzer58 <ryestar101@gmail.com>
 Date: Sun, 11 Aug 2024 22:07:54 +0100
-Subject: Amend port aliases for the Allwinner A13 so that now the port number issued correctly aligns with the physical port 
-number for interfaces I2C and UART
+Subject: Amend port aliases for the Allwinner A13 so that now the port number issued correctly aligns with the physical port for interfaces I2C and UART
 
 Signed-off-by: Ryzer58 <ryestar101@gmail.com>
 ---
