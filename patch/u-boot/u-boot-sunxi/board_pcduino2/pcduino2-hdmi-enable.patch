@@ -1,0 +1,64 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Ryzer58 <ryestar101@gmail.com>
+Date: Sat, 14 Sep 2024 22:28:43 +0100
+Subject: Add HDMI support for the pcduino2 board
+
+Signed-off-by: Ryzer58 <ryestar101@gmail.com>
+---
+ arch/arm/dts/sun4i-a10-pcduino.dts | 25 ++++++++++
+ 1 file changed, 25 insertions(+)
+
+diff --git a/arch/arm/dts/sun4i-a10-pcduino.dts b/arch/arm/dts/sun4i-a10-pcduino.dts
+index a332d61fd5..07aa03d743 100644
+--- a/arch/arm/dts/sun4i-a10-pcduino.dts
++++ b/arch/arm/dts/sun4i-a10-pcduino.dts
+@@ -72,10 +72,21 @@
+ 			label = "pcduino:green:rx";
+ 			gpios = <&pio 7 16 GPIO_ACTIVE_LOW>;
+ 		};
+ 	};
+ 
++	hdmi-connector {
++		compatible = "hdmi-connector";
++		type = "a";
++
++		port {
++			hdmi_con_in: endpoint {
++				remote-endpoint = <&hdmi_out_con>;
++			};
++		};
++	};
++
+ 	gpio-keys {
+ 		compatible = "gpio-keys";
+ 
+ 		key-back {
+ 			label = "Key Back";
+@@ -95,10 +106,24 @@
+ 			gpios = <&pio 7 19 GPIO_ACTIVE_LOW>;
+ 		};
+ 	};
+ };
+ 
++&de {
++	status = "okay";
++};
++
++&hdmi {
++	status = "okay";
++};
++
++&hdmi_out {
++	hdmi_out_con: endpoint {
++		remote-endpoint = <&hdmi_con_in>;
++	};
++};
++
+ &cpu0 {
+ 	cpu-supply = <&reg_dcdc2>;
+ };
+ 
+ &ehci0 {
+-- 
+Created with Armbian build tools https://github.com/armbian/build
+
