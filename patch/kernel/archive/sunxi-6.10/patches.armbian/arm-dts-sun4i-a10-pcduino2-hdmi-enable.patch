@@ -1,9 +1,9 @@
 From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
-From: Ryzer <ryestar101@gmail.com>
+From: Ryzer58 <ryestar101@gmail.com>
 Date: Fri, 13 Sep 2024 22:19:00 +0100
 Subject: Add HDMI support for the pcduino2 board
 
-Signed-off-by: Ryzer <ryestar101@gmail.com>
+Signed-off-by: Ryzer58 <ryestar101@gmail.com>
 ---
  arch/arm/boot/dts/allwinner/sun4i-a10-pcduino.dts | 25 ++++++++++
  1 file changed, 25 insertions(+)
