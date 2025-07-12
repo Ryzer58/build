@@ -1,0 +1,45 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Ryzer58 <ryestar101@gmail.com>
+Date: Sun, 2 Mar 2025 22:56:33 +0000
+Subject: pcduino3 - Fix USB VBUS regulator nodes and correct enable GPIO pin assignment
+
+Signed-off-by: Ryzer58 <ryestar101@gmail.com>
+---
+ arch/arm/boot/dts/allwinner/sun7i-a20-pcduino3.dts | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+
+diff --git a/arch/arm/boot/dts/allwinner/sun7i-a20-pcduino3.dts b/arch/arm/boot/dts/allwinner/sun7i-a20-pcduino3.dts
+index 928b86a95f34..f6fa3586d599 100644
+--- a/arch/arm/boot/dts/allwinner/sun7i-a20-pcduino3.dts
++++ b/arch/arm/boot/dts/allwinner/sun7i-a20-pcduino3.dts
+@@ -198,15 +198,13 @@ &reg_ldo2 {
+ 	regulator-min-microvolt = <3000000>;
+ 	regulator-max-microvolt = <3000000>;
+ 	regulator-name = "avcc";
+ };
+ 
+-&reg_usb1_vbus {
+-	status = "okay";
+-};
+ 
+ &reg_usb2_vbus {
++	gpios = <&pio 3 2 GPIO_ACTIVE_HIGH>;
+ 	status = "okay";
+ };
+ 
+ &uart0 {
+ 	pinctrl-names = "default";
+@@ -219,9 +217,9 @@ &usb_otg {
+ 	status = "okay";
+ };
+ 
+ &usbphy {
+ 	usb0_id_det-gpios = <&pio 7 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>; /* PH4 */
+-	usb1_vbus-supply = <&reg_usb1_vbus>;
++	usb1_vbus-supply = <&reg_vcc3v3>;
+ 	usb2_vbus-supply = <&reg_usb2_vbus>;
+ 	status = "okay";
+ };
+-- 
+Created with Armbian build tools https://github.com/armbian/build
+
